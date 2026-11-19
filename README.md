@@ -15,4 +15,4 @@ A simple personal portfolio website built for my Web Technology assignment (Seme
 
 ## Live Link
 
-Live link: (add after GitHub Pages is on)
+Live link: ( ( https://devangprajapati-x.github.io/DevangPrajapati_267164_Portfolio/ ) )
