@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Devang Prajapati — Portfolio</title>
+  <title>Devang Prajapati â€” Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,6 +12,8 @@
   <nav id="navbar">
     <div class="nav-inner">
       <a href="#home" class="nav-logo">DP</a>
+
+      <!-- Links (hidden on mobile until hamburger is clicked) -->
       <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -19,9 +21,13 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+
+      <!-- Dark mode toggle button -->
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
         <span class="toggle-icon">&#9789;</span>
       </button>
+
+      <!-- Hamburger button for mobile -->
       <button class="hamburger" id="hamburger" aria-label="Open menu">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -54,7 +60,7 @@
   <!-- About section -->
   <section id="about" class="section">
     <div class="section-inner">
-      <p class="section-label">01 — About</p>
+      <p class="section-label">01 â€” About</p>
       <div class="about-grid">
         <h2 class="about-heading">A few words about me.</h2>
         <div class="about-text">
@@ -72,12 +78,13 @@
     </div>
   </section>
 
+  <!-- Thin divider -->
   <hr class="divider">
 
   <!-- Skills section -->
   <section id="skills" class="section">
     <div class="section-inner">
-      <p class="section-label">02 — Skills</p>
+      <p class="section-label">02 â€” Skills</p>
       <h2 class="section-heading">What I work with.</h2>
       <ul class="skill-list">
         <li class="skill-tag">HTML</li>
@@ -89,14 +96,16 @@
     </div>
   </section>
 
+  <!-- Thin divider -->
   <hr class="divider">
 
   <!-- Projects section -->
   <section id="projects" class="section">
     <div class="section-inner">
-      <p class="section-label">03 — Projects</p>
+      <p class="section-label">03 â€” Projects</p>
       <h2 class="section-heading">Things I have built.</h2>
 
+      <!-- Project row 1 -->
       <div class="project-row">
         <div class="project-info">
           <h3 class="project-title">Registration Form</h3>
@@ -110,6 +119,7 @@
         <a href="#" class="project-link">View &rarr;</a>
       </div>
 
+      <!-- Project row 2 -->
       <div class="project-row">
         <div class="project-info">
           <h3 class="project-title">Colour Changer and Live Text</h3>
@@ -125,6 +135,58 @@
     </div>
   </section>
 
+  <!-- Thin divider -->
+  <hr class="divider">
+
+  <!-- Contact section -->
+  <section id="contact" class="section">
+    <div class="section-inner">
+      <p class="section-label">04 â€” Contact</p>
+      <h2 class="section-heading">Get in touch.</h2>
+      <p class="contact-note">
+        Have a question or want to work together? Drop me a message.
+      </p>
+
+      <!-- Contact form -->
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="form-group">
+          <label for="userName">Name</label>
+          <input type="text" id="userName" name="userName" required placeholder="Your name">
+          <span class="error-msg" id="nameError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="userEmail">Email</label>
+          <input type="email" id="userEmail" name="userEmail" required placeholder="you@example.com">
+          <span class="error-msg" id="emailError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="userMessage">Message</label>
+          <textarea id="userMessage" name="userMessage" rows="5" required placeholder="Write at least 10 characters..."></textarea>
+          <span class="error-msg" id="messageError"></span>
+        </div>
+
+        <button type="submit" class="form-btn">Send Message &rarr;</button>
+        <p class="form-success" id="formSuccess"></p>
+      </form>
+
+      <p class="contact-email">
+        Or email me directly at
+        <a href="mailto:devangprajapati411@gmail.com">devangprajapati411@gmail.com</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="section-inner">
+      <p>&copy; 2024 Devang Prajapati. Built with HTML, CSS and JavaScript.</p>
+    </div>
+  </footer>
+
+  <!-- JS at the end so HTML loads first -->
   <script src="script.js"></script>
 </body>
 </html>
+
