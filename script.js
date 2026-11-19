@@ -8,22 +8,18 @@ document.addEventListener('DOMContentLoaded', function () {
   var body = document.body;
   var toggleIcon = themeToggle.querySelector('.toggle-icon');
 
-  // Check if user previously chose dark mode
   if (localStorage.getItem('darkMode') === 'true') {
     body.classList.add('dark-mode');
-    toggleIcon.textContent = '\u2600'; // sun icon
+    toggleIcon.textContent = '\u2600';
   }
 
-  // Toggle dark mode on click
   themeToggle.addEventListener('click', function () {
     body.classList.toggle('dark-mode');
-
-    // Switch icon between moon and sun
     if (body.classList.contains('dark-mode')) {
-      toggleIcon.textContent = '\u2600'; // sun
+      toggleIcon.textContent = '\u2600';
       localStorage.setItem('darkMode', 'true');
     } else {
-      toggleIcon.textContent = '\u263D'; // moon
+      toggleIcon.textContent = '\u263D';
       localStorage.setItem('darkMode', 'false');
     }
   });
@@ -33,18 +29,44 @@ document.addEventListener('DOMContentLoaded', function () {
   var hamburger = document.getElementById('hamburger');
   var navLinks = document.getElementById('navLinks');
 
-  // Toggle the menu when hamburger is clicked
   hamburger.addEventListener('click', function () {
     hamburger.classList.toggle('active');
     navLinks.classList.toggle('open');
   });
 
-  // Close menu when a link is clicked
   var navItems = navLinks.querySelectorAll('a');
   for (var i = 0; i < navItems.length; i++) {
     navItems[i].addEventListener('click', function () {
       hamburger.classList.remove('active');
       navLinks.classList.remove('open');
+    });
+  }
+
+
+  // ===== 3. SCROLL REVEAL ANIMATION =====
+  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!prefersReduced) {
+    var revealSections = document.querySelectorAll('.reveal');
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+
+    revealSections.forEach(function (section) {
+      observer.observe(section);
+    });
+  } else {
+    var allReveal = document.querySelectorAll('.reveal');
+    allReveal.forEach(function (el) {
+      el.classList.add('visible');
     });
   }
 
