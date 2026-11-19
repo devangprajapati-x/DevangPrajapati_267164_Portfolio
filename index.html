@@ -8,6 +8,55 @@
 </head>
 <body>
 
+  <!-- Navigation bar -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">DP</a>
+
+      <!-- Links (hidden on mobile until hamburger is clicked) -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Dark mode toggle button -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <span class="toggle-icon">&#9789;</span>
+      </button>
+
+      <!-- Hamburger button for mobile -->
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero / Home section -->
+  <header id="home" class="hero">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <p class="hero-label">Portfolio</p>
+        <h1 class="hero-name" id="heroName">Devang<br>Prajapati</h1>
+      </div>
+      <div class="hero-right">
+        <p class="hero-intro">
+          B.Tech CSE, Semester 3<br>
+          JG University
+        </p>
+        <p class="hero-tagline">
+          Building things for the web,<br>one line of code at a time.
+        </p>
+        <a href="#projects" class="hero-cta">See my work &darr;</a>
+      </div>
+    </div>
+    <div class="hero-divider"></div>
+  </header>
+
   <!-- JS at the end so HTML loads first -->
   <script src="script.js"></script>
 </body>
