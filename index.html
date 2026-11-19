@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Devang Prajapati â€” Portfolio</title>
+  <title>Devang Prajapati — Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,8 +12,6 @@
   <nav id="navbar">
     <div class="nav-inner">
       <a href="#home" class="nav-logo">DP</a>
-
-      <!-- Links (hidden on mobile until hamburger is clicked) -->
       <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -21,13 +19,9 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-
-      <!-- Dark mode toggle button -->
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
         <span class="toggle-icon">&#9789;</span>
       </button>
-
-      <!-- Hamburger button for mobile -->
       <button class="hamburger" id="hamburger" aria-label="Open menu">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -57,7 +51,80 @@
     <div class="hero-divider"></div>
   </header>
 
-  <!-- JS at the end so HTML loads first -->
+  <!-- About section -->
+  <section id="about" class="section">
+    <div class="section-inner">
+      <p class="section-label">01 — About</p>
+      <div class="about-grid">
+        <h2 class="about-heading">A few words about me.</h2>
+        <div class="about-text">
+          <p>
+            I am a B.Tech CSE student at JG University. I am learning web
+            development and enjoy turning small ideas into working pages.
+          </p>
+          <p>
+            I am currently building my basics in HTML, CSS and JavaScript.
+            Every project I make teaches me something new, and I try to
+            keep things clean and simple.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Skills section -->
+  <section id="skills" class="section">
+    <div class="section-inner">
+      <p class="section-label">02 — Skills</p>
+      <h2 class="section-heading">What I work with.</h2>
+      <ul class="skill-list">
+        <li class="skill-tag">HTML</li>
+        <li class="skill-tag">CSS</li>
+        <li class="skill-tag">JavaScript</li>
+        <li class="skill-tag">Git</li>
+        <li class="skill-tag">GitHub</li>
+      </ul>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Projects section -->
+  <section id="projects" class="section">
+    <div class="section-inner">
+      <p class="section-label">03 — Projects</p>
+      <h2 class="section-heading">Things I have built.</h2>
+
+      <div class="project-row">
+        <div class="project-info">
+          <h3 class="project-title">Registration Form</h3>
+          <p class="project-desc">
+            A form built with HTML and CSS. It uses text, email, password,
+            radio buttons, checkboxes and a drop-down. All required fields
+            are validated before submission.
+          </p>
+          <p class="project-tech">HTML &middot; CSS</p>
+        </div>
+        <a href="#" class="project-link">View &rarr;</a>
+      </div>
+
+      <div class="project-row">
+        <div class="project-info">
+          <h3 class="project-title">Colour Changer and Live Text</h3>
+          <p class="project-desc">
+            A small JavaScript app where a button changes the heading colour
+            and a text box shows what you type in real time. Built using
+            addEventListener and the input event.
+          </p>
+          <p class="project-tech">HTML &middot; CSS &middot; JavaScript</p>
+        </div>
+        <a href="#" class="project-link">View &rarr;</a>
+      </div>
+    </div>
+  </section>
+
   <script src="script.js"></script>
 </body>
 </html>

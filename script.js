@@ -1,1 +1,2 @@
-// script.js â€” main JavaScript file
+// script.js — main JavaScript file
+
